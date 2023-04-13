@@ -26,3 +26,29 @@ let allNumbersArray = negativeNumbers.concat(zero, positiveNumbers);
 // console.log(allNumbersArray); 
 // Resultado: [-3,-2,-1,0,1,2,3,]
 
+// 2) Every: Itera e retorna false se a condição informada bater
+
+function isEven(x) {
+    console.log(x);
+
+    return x % 2 === 0 ? true : false;
+}
+
+let numbers = [];
+
+for(i = 1; i <= 15; i++) {
+    numbers.push(i);
+};
+
+// numbers.every(isEven);
+
+// Vai devolver o número 1: Pq ele é o primeiro numero que não é multiplo de 2 então ele retornou false e cancelou a função:
+
+// 3) Método Some: Itera e retorna true se a condição informada bater 
+
+numbers.some(isEven);
+
+// forEach: Iterando com o forEach ele vai iterar pelo array todo fazendo uma função específica.
+// Ele passa em um por um e executa a lógica do console log retornando se o número é primo ou não
+numbers.forEach((element) => console.log(element % 2 === 0));
+
