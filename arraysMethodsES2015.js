@@ -29,7 +29,7 @@ let allNumbersArray = negativeNumbers.concat(zero, positiveNumbers);
 // 2) Every: Itera e retorna false se a condição informada bater
 
 function isEven(x) {
-    console.log(x);
+    // console.log(x);
 
     return x % 2 === 0 ? true : false;
 }
@@ -51,4 +51,31 @@ numbers.some(isEven);
 // forEach: Iterando com o forEach ele vai iterar pelo array todo fazendo uma função específica.
 // Ele passa em um por um e executa a lógica do console log retornando se o número é primo ou não
 numbers.forEach((element) => console.log(element % 2 === 0));
+
+// map: Ele itera por todos elementos e traz uma nova função com os resultados.
+
+const isMap = numbers.map(isEven);
+// console.log(isMap);
+
+const  members = ["Antonio", "Alex", "Luis"];
+
+const returnMembers = members.map(element => element);
+
+// console.log(returnMembers);
+
+
+// filter: Ele itera pela array e traz o resultado filtrado pela condicional.
+
+const isEvenFiltered = numbers.filter(isEven);
+
+console.log(isEvenFiltered)
+
+
+// Reduce: Ele pode ser usaod caso queiramos somar algum array:
+// Recebe os seguintes parametros: previusValue, currentValue , index e array. (index e array são opicionais)
+
+const x = numbers.reduce((previus, current) => previus + current);
+
+console.log(x);
+// Retorna 120 que é a soma do array.
 
