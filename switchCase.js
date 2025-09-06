@@ -14,8 +14,6 @@ switch (titleColor) {
 }
 
 
-
-
 const handleNotification = (notification) => {
   const { type, payload } = notification;
 
